@@ -1,13 +1,14 @@
-CC=gcc
-CFLAGS=-Wall -g 
-BINARY=icsh
+CXX = g++
+CXXFLAGS = -std=c++20 -Wall -Wextra 
+TARGET = icsh
+SOURCE = icsh.cpp
 
-all: icsh
+all: $(TARGET)
 
-icsh: icsh.c
-	$(CC) -o $(BINARY) $(CFLAGS) $<
-
-.PHONY: clean
+$(TARGET): $(SOURCE)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SOURCE)
 
 clean:
-	rm -f $(BINARY)
+	rm -f $(TARGET)
+
+.PHONY: all clean
