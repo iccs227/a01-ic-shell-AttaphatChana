@@ -2,3 +2,5 @@
 # ICSH
 
 Please describe your assumptions and/or implementation here. 
+<br>
+my job fg and bg command is a bit different, you gotta type the pid of the background followed afer fg and bg in order to work
